@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useCart } from "../Context/ContextApi.jsx";
 import { useState } from "react";
 const NavBar = () => {
- 
   const { handleScrollToBlogs } = useCart();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,24 +15,38 @@ const NavBar = () => {
         GRO.<span className="text-red-500">PRO</span>
       </div>
 
-     { /* Navigation Links */}
-        <ul className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-          <Link to={"/"}>
-            <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">Home</li>
-          </Link>
-          <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">About Us</li>
-          <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">Pricing</li>
-          <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer" id="1"onClick={handleScrollToBlogs}>Blog</li>
-          <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">Contact</li>
-        </ul>
+      {/* Navigation Links */}
+      <ul className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+        <Link to={"/"}>
+          <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">
+            Home
+          </li>
+        </Link>
+        <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">
+          About Us
+        </li>
+        <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">
+          Pricing
+        </li>
+        <li
+          className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer"
+          id="1"
+          onClick={handleScrollToBlogs}
+        >
+          Blog
+        </li>
+        <li className="hover:text-black hover:border-b-2 hover:border-black cursor-pointer">
+          <Link to={"contact"}>Contact</Link>
+        </li>
+      </ul>
 
-        <div className="md:hidden">
+      <div className="md:hidden">
         <button onClick={toggleMenu} className="text-2xl focus:outline-none">
           &#9776;
         </button>
       </div>
 
-        {/* Auth Buttons */}
+      {/* Auth Buttons */}
 
       {/* Mobile Menu=*/}
       <div
@@ -75,9 +88,11 @@ const NavBar = () => {
             >
               Blog
             </li>
-            <li className="hover:text-red-500 border-l-4 border-transparent hover:border-red-500 pl-3 cursor-pointer transition-all duration-200">
-              Contact
-            </li>
+            <Link to="contact">
+              <li className="hover:text-red-500 border-l-4 border-transparent hover:border-red-500 pl-3 cursor-pointer transition-all duration-200">
+                Contact
+              </li>
+            </Link>
           </ul>
 
           {/* Footer or social links in mobile menu (optional) */}
