@@ -52,7 +52,7 @@ const BlogSection = () => {
 
         {/* ---------------- */}
 
-        <div className="bg-[#eaeeed] rounded-xl p-8 mt-10 max-w-6xl mx-auto shadow-sm md:h-[300px] relative flex justify-center items-center mb-10">
+        <div className="bg-[#eaeeed] rounded-xl p-8 mt-10 w-full mx-auto shadow-sm md:h-[300px] relative flex justify-center items-center mb-10">
           {/* Decorative dots */}
           <div className="">
             {/* Yellow dot - top left */}
@@ -91,8 +91,9 @@ const BlogSection = () => {
 
 
         <BlogItems href="#1" />
-        <Cards/>
+        
       </section>
+      <Cards/>
     </div>
   );
 };

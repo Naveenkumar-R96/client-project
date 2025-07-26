@@ -23,10 +23,10 @@ const Home = () => {
             help you spend less.
           </p>
           <div className="flex justify-center gap-4">
-            <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition">
+            <button className="bg-black text-white px-6 py-3 rounded-full font-medium  transition cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black ">
               Get Started
             </button>
-            <button className="border border-black text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+            <button className="border border-black text-black px-6 py-3 rounded-full font-medium hover:bg-black hover:text-white transition cursor-pointer">
               View Pricing
             </button>
           </div>
