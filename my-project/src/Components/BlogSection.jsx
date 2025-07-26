@@ -1,7 +1,9 @@
 import React from "react";
 import Cards from "./Cards";
-
+import BlogItems from "./BlogItems";
+import { useCart } from "../Context/ContextApi.jsx"; // Assuming useCart is imported from ContextApi.jsx
 const BlogSection = () => {
+  const { blogRef } = useCart(); // Assuming useCart is imported from ContextApi.jsx
   return (
     <div>
       <section className="px-4 md:px-16 mt-16">
@@ -87,6 +89,8 @@ const BlogSection = () => {
           </div>
         </div>
 
+
+        <BlogItems href="#1" />
         <Cards/>
       </section>
     </div>

@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar.jsx'
 const App = () => {
   return (
     <div className='min-h-screen'>
-      <NavBar/>
+      <NavBar className=""/>
       <AllRoutes/>
     </div>
   )
