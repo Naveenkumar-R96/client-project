@@ -81,22 +81,8 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Floating Social Icons */}
-        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 space-y-4 hidden md:block">
-          {[
-            { icon: "facebook", bg: "bg-blue-500" },
-            { icon: "linkedin", bg: "bg-blue-700" },
-            { icon: "youtube", bg: "bg-red-600" },
-            { icon: "envelope", bg: "bg-black" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className={`w-12 h-12 ${item.bg} rounded-full flex items-center justify-center shadow-lg`}
-            >
-              <i className={`fab fa-${item.icon} text-white text-xl`}></i>
-            </div>
-          ))}
-        </div>
+       
+       
       </div>
     </div>
     </div>
