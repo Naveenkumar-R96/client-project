@@ -26,7 +26,7 @@ export default function ContactForm() {
           </p>
         </Link>
       </div>
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+      <div className="py-12 flex items-center justify-center bg-gray-100 p-6">
         
       <div className="bg-white rounded-3xl shadow-lg flex flex-col md:flex-row w-full max-w-6xl p-10 relative">
         {/* Left - Form */}
@@ -63,6 +63,13 @@ export default function ContactForm() {
             placeholder="Message"
             className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
           ></textarea>
+          <div
+            className="mt-4"
+          >
+            <button className="bg-black text-white px-6 py-3 rounded-full font-medium transition cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black ">
+              Submit Quote
+            </button>
+          </div>
         </div>
 
         {/* Right - Image */}

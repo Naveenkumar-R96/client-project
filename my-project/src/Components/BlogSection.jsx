@@ -82,7 +82,7 @@ const BlogSection = () => {
                 placeholder="Search blog"
                 className="w-full md:w-96 px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
               />
-              <button className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+              <button className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition cursor-pointer">
                 Search Now
               </button>
             </div>

@@ -12,7 +12,7 @@ const NavBar = () => {
     <nav className="flex items-center justify-between px-6 md:px-16 py-4 bg-white shadow-sm">
       {/* Logo */}
       <div className="text-2xl font-bold">
-        GRO.<span className="text-red-500">PRO</span>
+        Short.<span className="text-red-500">ExpoImages</span>
       </div>
 
       {/* Navigation Links */}

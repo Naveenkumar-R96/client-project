@@ -24,7 +24,7 @@ const Home = () => {
           </p>
           <div className="flex justify-center gap-4">
             <button className="bg-black text-white px-6 py-3 rounded-full font-medium  transition cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black ">
-              Get Started
+              Book a call
             </button>
             <button className="border border-black text-black px-6 py-3 rounded-full font-medium hover:bg-black hover:text-white transition cursor-pointer">
               View Pricing
