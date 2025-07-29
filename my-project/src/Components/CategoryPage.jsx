@@ -8,7 +8,7 @@ const CategoryPage = () => {
 
   // Find the matching category
   const categoryData =
-    decodedName === "All Category"
+    decodedName === "all"
       ? {
           category: "All Categories",
           items: data.flatMap((cat) => cat.items || []),
@@ -40,17 +40,17 @@ const CategoryPage = () => {
         {/* Optional Triangle Background */}
         <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-no-repeat bg-center opacity-10 pointer-events-none" />
 
-        <h1 className="text-4xl font-bold text-gray-800 z-10 relative">
+        <h1 className="text-5xl font-bold text-gray-800 z-10 relative">
           {categoryData.category}
         </h1>
 
         {/* Breadcrumb */}
-        <p className="text-sm text-gray-500 mt-2 z-10 relative font-bold">
+        <p className="text-md text-gray-500 mt-2 z-10 relative font-bold">
           <Link to="/" className="text-black hover:underline">
             Home
           </Link>
           <span className="mx-1">›</span>
-          <span className="text-blue-500">{categoryData.category}</span>
+          <span className="text-blue-500 ">{categoryData.category}</span>
         </p>
       </div>
 

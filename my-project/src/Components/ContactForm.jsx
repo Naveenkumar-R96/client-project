@@ -28,8 +28,18 @@ export default function ContactForm() {
       </div>
       <div className="py-12 flex items-center justify-center bg-gray-100 p-6">
         
-      <div className="bg-white rounded-3xl shadow-lg flex flex-col md:flex-row w-full max-w-6xl p-10 relative">
+      <div className="bg-white rounded-3xl shadow-lg flex flex-col md:flex-row w-full max-w-6xl p-10 relative gap-2">
         {/* Left - Form */}
+
+        <div className="md:w-1/3 w-full flex justify-center items-center mt-10 md:mt-0">
+          <img
+            src="https://images.unsplash.com/photo-1481214110143-ed630356e1bb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Contact"
+            className="rounded-2xl object-cover w-full max-h-[400px]"
+          />
+        </div>
+
+
         <div className="md:w-2/3 w-full pr-6">
           <h2 className="text-2xl font-bold text-sky-500 mb-8">Send Us A Message</h2>
 
@@ -73,14 +83,7 @@ export default function ContactForm() {
         </div>
 
         {/* Right - Image */}
-        <div className="md:w-1/3 w-full flex justify-center items-center mt-10 md:mt-0">
-          <img
-            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
-            alt="Contact"
-            className="rounded-2xl object-cover w-full max-h-[400px]"
-          />
-        </div>
-
+       
        
        
       </div>

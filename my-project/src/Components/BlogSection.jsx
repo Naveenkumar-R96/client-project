@@ -6,33 +6,34 @@ const BlogSection = () => {
   const { blogRef } = useCart(); // Assuming useCart is imported from ContextApi.jsx
   return (
     <div>
-      <section className="px-4 md:px-16 mt-16">
+      <h1 className="mt-5 px-10 ml-5 md:px-10  md:text-3xl  text-2xl font-bold text-gray-800">Blog Section</h1>
+      <section className="px-4 md:px-16 mt-3 md:mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[500px]">
           {/* Big card */}
           <div className="bg-white rounded-2xl shadow p-4 md:row-span-2">
             <img
               src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?auto=format&fit=crop&w=800&q=80"
               alt="Main"
-              className="rounded-xl mb-4 w-full object-cover h-60"
+              className="rounded-xl mb-4 w-full object-cover h-40 md:h-60"
             />
             <p className="text-green-500 font-semibold text-sm mb-1">DESIGN</p>
-            <h2 className="text-xl font-bold mb-2 text-gray-900">
+            <h2 className="text-lg md:text-xl font-bold mb-2 text-gray-900">
               Your company might be in need of a social media audit.
             </h2>
-            <div className="flex justify-between text-sm text-gray-500">
+            <div className="flex justify-between text-xs md:text-sm text-gray-500">
               <p>By Rubeus Hagrid</p>
               <p>July 20, 2021</p>
             </div>
           </div>
 
           {/* Small card 1 */}
-          <div className="bg-white rounded-2xl shadow p-4 w[100px]">
+          <div className="bg-white rounded-2xl shadow p-4">
             <img
               src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?auto=format&fit=crop&w=800&q=80"
               alt="Email"
-              className="rounded-xl mb-4 w-full object-cover h-28"
+              className="rounded-xl mb-4 w-full object-cover h-20 md:h-28"
             />
-            <p className="text-md font-semibold text-gray-800">
+            <p className="text-sm md:text-md font-semibold text-gray-800">
               How can businesses utilize email marketing to nurture their leads.
             </p>
           </div>
@@ -42,9 +43,9 @@ const BlogSection = () => {
             <img
               src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80"
               alt="Auto Reply"
-              className="rounded-xl mb-4 w-full object-cover h-28"
+              className="rounded-xl mb-4 w-full object-cover h-20 md:h-28"
             />
-            <p className="text-md font-semibold text-gray-800">
+            <p className="text-sm md:text-md font-semibold text-gray-800">
               Auto-reply : How to use automated responses for your email lists.
             </p>
           </div>
@@ -52,26 +53,26 @@ const BlogSection = () => {
 
         {/* ---------------- */}
 
-        <div className="bg-[#eaeeed] rounded-xl p-8 mt-10 w-full mx-auto shadow-sm md:h-[300px] relative flex justify-center items-center mb-10">
+        <div className="bg-[#eaeeed] rounded-xl p-6 md:p-8 mt-10 w-full mx-auto shadow-sm md:h-[300px] relative flex justify-center items-center mb-10">
           {/* Decorative dots */}
           <div className="">
             {/* Yellow dot - top left */}
-            <div className="absolute top-4 left-4 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 md:top-20 md:left-40 bg-yellow-400 rounded-full" />
+            <div className="absolute top-2 md:top-4 left-2 md:left-4 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-yellow-400 rounded-full" />
 
             {/* Blue dot - top right */}
-            <div className="absolute top-8 right-8 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-blue-400 rounded-full" />
+            <div className="absolute top-4 md:top-8 right-2 md:right-4 w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-blue-400 rounded-full" />
 
             {/* Green dot - bottom left */}
-            <div className="absolute bottom-6 left-6 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-green-400 rounded-full" />
+            <div className="absolute bottom-4 md:bottom-6 left-2 md:left-4 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-green-400 rounded-full" />
 
             {/* Red dot - bottom right */}
-            <div className="absolute bottom-10 right-10 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-red-400 rounded-full" />
+            <div className="absolute bottom-6 md:bottom-10 right-2 md:right-4 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-red-400 rounded-full" />
           </div>
 
           {/* Content */}
           <div className="text-center space-y-4">
-            <h1 className="text-4xl font-bold text-gray-900">All blog posts</h1>
-            <p className="text-gray-600">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-900">All blog posts</h1>
+            <p className="text-sm md:text-base text-gray-600">
               With over 2,400 apps available in the Slack App Directory.
             </p>
 
@@ -80,20 +81,18 @@ const BlogSection = () => {
               <input
                 type="text"
                 placeholder="Search blog"
-                className="w-full md:w-96 px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
+                className="w-full md:w-96 px-4 md:px-6 py-2 md:py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
               />
-              <button className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition cursor-pointer">
+              <button className="px-4 md:px-6 py-2 md:py-3 bg-black text-white rounded-full hover:bg-gray-800 transition cursor-pointer">
                 Search Now
               </button>
             </div>
           </div>
         </div>
 
-
         <BlogItems href="#1" />
-        
       </section>
-      <Cards/>
+      <Cards />
     </div>
   );
 };

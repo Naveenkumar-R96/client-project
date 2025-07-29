@@ -1,6 +1,7 @@
 [
   {
     "category": "Technology",
+    "description": "Explore the latest trends in tech and innovation.",
     "items": [
       {
         "title": "AI Revolution",
@@ -48,6 +49,7 @@
   },
   {
     "category": "Nature",
+    "description": "Discover the beauty of nature and wildlife.",
     "items": [
       {
         "title": "Rainforest",
@@ -95,6 +97,7 @@
   },
   {
     "category": "Food",
+    "description": "Delicious bites from around the world.",
     "items": [
       {
         "title": "Gourmet Burger",
@@ -134,7 +137,7 @@
       {
         "title": "Tropical Fruits",
         "image": "https://source.unsplash.com/featured/?fruits,tropical",
-        "description": "Nature\u2019s sweetest treats.",
+        "description": "Nature’s sweetest treats.",
         "author": "Isabella Lee",
         "date": "2023-05-13"
       }
@@ -142,6 +145,7 @@
   },
   {
     "category": "Travel",
+    "description": "Journeys across cultures and continents.",
     "items": [
       {
         "title": "Paris Adventure",
@@ -189,6 +193,7 @@
   },
   {
     "category": "Art & Design",
+    "description": "Creative expressions in visual form.",
     "items": [
       {
         "title": "Modern Art",
