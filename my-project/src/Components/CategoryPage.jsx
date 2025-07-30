@@ -28,7 +28,7 @@ const CategoryPage = () => {
   return (
     <div className="bg-white">
       {/* 🔵 Top Banner */}
-      <div className="bg-[#f9f9fb] relative py-16 text-center overflow-hidden">
+      <div className="bg-[#f9f9fb] relative py-10 text-center overflow-hidden">
         {/* Decorative Shapes */}
         <div className="absolute right-[100px] top-25 w-[150px] h-[150px] bg-gray-300 opacity-10 transform rotate-45 origin-top-right" />
         <div className="absolute top-6 left-10 w-0 h-0 border-l-[12px] border-r-[12px] border-b-[20px] border-transparent border-b-yellow-400 opacity-50" />
@@ -40,7 +40,7 @@ const CategoryPage = () => {
         {/* Optional Triangle Background */}
         <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-no-repeat bg-center opacity-10 pointer-events-none" />
 
-        <h1 className="text-5xl font-bold text-gray-500 tracking-wide z-10 relative ">
+        <h1 className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic tracking-wide">
           {categoryData.category}
         </h1>
 

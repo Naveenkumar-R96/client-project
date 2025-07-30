@@ -15,15 +15,17 @@ const Card = ({ title, description, category, price }) => (
         <p className="text-gray-600 mb-2">{description}</p>
 
         {/* Price */}
-        <p className="text-lg font-semibold text-green-600 mb-4">{price}</p>
+        <div className="flex items-end justify-between mt-4">
+          <p className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic">{price}</p>
 
-        {/* Link to dynamic category */}
-        <Link
-          to={`/category/${encodeURIComponent(category)}`}
-          className="text-sky-500 font-medium flex items-center hover:underline"
-        >
-          More Details <FaArrowRight className="ml-2 text-xs" />
-        </Link>
+          {/* Link to dynamic category */}
+          <Link
+            to={`/category/${encodeURIComponent(category)}`}
+            className="text-sky-500 font-medium flex items-center hover:underline"
+          >
+            More Details <FaArrowRight className="ml-2 text-xs" />
+          </Link>
+        </div>
       </div>
     </div>
   </div>
@@ -66,10 +68,19 @@ const PricingPage = () => {
   return (
     <section className="min-h-screen bg-[#f8fcff] flex flex-col py-10 px-4">
       {/* Section Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center">
-        Pricing Details
-      </h2>
-
+      <div className="bg-[#f9f9fb] relative text-center overflow-hidden mb-10">
+        <h2 className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic text-center">
+          Pricing
+        </h2>
+        <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold">
+          <Link to="/" className="text-black hover:underline">
+            Home
+          </Link>
+          <span className="mx-1">›</span>
+          <span className="text-blue-500">Pricing</span>
+        </p>
+      </div>
+      
       {/* Card Grid */}
       <div className="flex flex-wrap justify-center gap-6">
         {features.map((item, index) => (

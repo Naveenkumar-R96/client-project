@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-[#f9f9fb] relative py-20 text-center overflow-hidden">
+      <div className="bg-[#f9f9fb] relative text-center overflow-hidden py-10 px-4">
         {/* Decorative Shapes */}
         <div className="absolute right-[100px] top-20 w-[150px] h-[150px] bg-gray-300 opacity-10 rotate-45 origin-top-right" />
         <div className="absolute top-6 left-10 w-0 h-0 border-l-[12px] border-r-[12px] border-b-[20px] border-transparent border-b-yellow-400 opacity-50" />
@@ -20,7 +20,7 @@ const AboutUs = () => {
         </h1>
 
         {/* Breadcrumb */}
-        <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold italic">
+        <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold">
           <Link to="/" className="text-black hover:underline">
             Home
           </Link>

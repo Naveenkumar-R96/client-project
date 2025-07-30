@@ -16,15 +16,18 @@ export default function ContactForm() {
         {/* Optional triangle background image or shapes */}
         <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-no-repeat bg-center opacity-10 pointer-events-none" />
 
-        <h1 className="text-4xl font-bold text-gray-800 z-10 relative">
+        <h1 className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic">
          Contact
         </h1>
-        <Link to="/">
+        
           <p className="text-sm text-gray-500 mt-2 z-10 relative font-bold hover:text-black">
-            Home <span className="mx-1">›</span>
+            <Link to="/">
+              Home
+            </Link>
+            <span className="mx-1">›</span>
             <span className="text-blue-500">Contact</span>
           </p>
-        </Link>
+        {/* </Link> */}
       </div>
       <div className="py-12 flex items-center justify-center bg-gray-100 p-6">
         
