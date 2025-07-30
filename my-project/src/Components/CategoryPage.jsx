@@ -40,7 +40,7 @@ const CategoryPage = () => {
         {/* Optional Triangle Background */}
         <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-no-repeat bg-center opacity-10 pointer-events-none" />
 
-        <h1 className="text-5xl font-bold text-gray-800 z-10 relative">
+        <h1 className="text-5xl font-bold text-gray-500 tracking-wide z-10 relative ">
           {categoryData.category}
         </h1>
 

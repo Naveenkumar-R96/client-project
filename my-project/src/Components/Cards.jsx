@@ -1,5 +1,5 @@
 import React from "react";
-
+import Faq from "./Faq.jsx"; // Assuming Faq is a component that you have created
 const Cards = () => {
   const cards = [
     {
@@ -79,22 +79,25 @@ const Cards = () => {
                   {card.title}
                 </h2>
                 <div className="mt-4 group">
-  <a
-    href="#"
-    className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-100 hover:text-blue-700 hover:shadow-md"
-  >
-    <span className="relative z-10 group-hover:underline">More Details</span>
-    <span className="transform group-hover:translate-x-1 transition-transform duration-300 text-lg">
-      →
-    </span>
-  </a>
-</div>
-
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-100 hover:text-blue-700 hover:shadow-md"
+                  >
+                    <span className="relative z-10 group-hover:underline">
+                      More Details
+                    </span>
+                    <span className="transform group-hover:translate-x-1 transition-transform duration-300 text-lg">
+                      →
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <Faq/>
     </div>
   );
 };
