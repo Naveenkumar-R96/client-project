@@ -1,10 +1,23 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import data from "../data/dummy_data.json";
-
+import { FaArrowCircleRight } from "react-icons/fa";
 const CategoryPage = () => {
   const { name } = useParams();
   const decodedName = decodeURIComponent(name);
+
+  const steps = [
+    "Import Bracketed Shots",
+    "Merge to HDR",
+    "Basic Adjustments",
+    "White Balance Adjustment",
+    "Clarity and Dehaze",
+    "Graduated and Radial Filters",
+    "Detail and Sharpening",
+    "Noise Reduction",
+    "Final Color Adjustments",
+    "Vignetting and Final Touches",
+  ];
 
   // Find the matching category
   const categoryData =
@@ -53,6 +66,18 @@ const CategoryPage = () => {
           <span className="text-blue-500 ">{categoryData.category}</span>
         </p>
       </div>
+
+      <section className="bg-white py-16 px-8 md:px-20 text-center max-w-[800px] mx-auto">
+      <h2 className="text-4xl font-bold mb-12 text-gray-800">Our <span className="text-gray-900">10-step HDR process</span></h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        {steps.map((step, index) => (
+          <div key={index} className="flex items-start gap-3 text-lg text-gray-800">
+            <FaArrowCircleRight className="text-blue-500 mt-1" size={24} />
+            <span>{step}</span>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* 🔵 Hero Description */}
       <div className="bg-blue-200/25 py-16 text-center px-4">

@@ -4,8 +4,14 @@ import { FaArrowRight } from "react-icons/fa";
 import data from "../data/dummy_data.json";
 import { useCart } from "../Context/ContextApi";
 
-const CategoryButtons = () => {
+const CategoryButtons = ({ searchQuery })  => {
   const { blogRef } = useCart();
+  const filteredData = data.filter((item) =>
+    (item.title?.toLowerCase() || "").includes(searchQuery.toLowerCase()) ||
+    (item.description?.toLowerCase() || "").includes(searchQuery.toLowerCase()) ||
+    (item.category?.toLowerCase() || "").includes(searchQuery.toLowerCase())
+  );
+
 
   return (
     <div className="px-4 md:px-12 py-10" ref={blogRef} id="blog">
@@ -17,7 +23,7 @@ const CategoryButtons = () => {
         {/* All Categories Card */}
         <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 w-full max-w-sm text-left mx-auto">
           <div className="flex items-start">
-            <div className="w-1 h-5 bg-blue-500 rounded-sm mr-3 mt-1" />
+            <div className="w-1 h-5 bg-orange-400 rounded-sm mr-3 mt-1" />
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">
                 All Categories
@@ -36,7 +42,7 @@ const CategoryButtons = () => {
         </div>
 
         {/* Individual Category Cards */}
-        {data.map((category, index) => (
+        {filteredData.map((category, index) => (
           <div
             key={index}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 w-full max-w-sm text-left mx-auto"

@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaPaperPlane } from "react-icons/fa";
+
 export default function ContactForm() {
   return (
     <div>
-        <div className="bg-[#f9f9fb] relative py-16 text-center ">
+      <div className="bg-[#f9f9fb] relative py-16 text-center ">
         <div className="absolute right-[100px] top-25 w-[150px] h-[150px] bg-gray-300 opacity-10 transform rotate-45 origin-top-right overflow-hidden" />
 
         <div className="absolute top-6 left-10 w-0 h-0 border-l-[12px] border-r-[12px] border-b-[20px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-50" />
@@ -17,81 +19,74 @@ export default function ContactForm() {
         <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-no-repeat bg-center opacity-10 pointer-events-none" />
 
         <h1 className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic">
-         Contact
+          Contact
         </h1>
-        
-          <p className="text-sm text-gray-500 mt-2 z-10 relative font-bold hover:text-black">
-            <Link to="/">
-              Home
-            </Link>
-            <span className="mx-1">›</span>
-            <span className="text-blue-500">Contact</span>
-          </p>
+
+        <p className="text-sm text-gray-500 mt-2 z-10 relative font-bold hover:text-black">
+          <Link to="/">Home</Link>
+          <span className="mx-1">›</span>
+          <span className="text-blue-500">Contact</span>
+        </p>
         {/* </Link> */}
       </div>
       <div className="py-12 flex items-center justify-center bg-gray-100 p-6">
-        
-      <div className="bg-white rounded-3xl shadow-lg flex flex-col md:flex-row w-full max-w-6xl p-10 relative gap-2">
-        {/* Left - Form */}
+        <div className="bg-white rounded-3xl shadow-lg flex flex-col md:flex-row w-full max-w-6xl p-10 relative gap-2">
+          {/* Left - Form */}
 
-        <div className="md:w-1/3 w-full flex justify-center items-center mt-10 md:mt-0">
-          <img
-            src="https://images.unsplash.com/photo-1481214110143-ed630356e1bb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Contact"
-            className="rounded-2xl object-cover w-full max-h-[400px]"
-          />
-        </div>
-
-
-        <div className="md:w-2/3 w-full pr-6">
-          <h2 className="text-2xl font-bold text-sky-500 mb-8">Send Us A Message</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none "
-            />
-            <input
-              type="text"
-              placeholder="+1234567890"
-              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
+          <div className="md:w-1/3 w-full flex justify-center items-center mt-10 md:mt-0">
+            <img
+              src="https://images.unsplash.com/photo-1481214110143-ed630356e1bb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Contact"
+              className="rounded-2xl object-cover w-full max-h-[400px]"
             />
           </div>
 
-          <input
-            type="email"
-            placeholder="Email"
-            className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
-          />
+          <div className="md:w-2/3 w-full pr-6">
+            <h2 className="text-2xl font-bold text-sky-500 mb-8">
+              Send Us A Message
+            </h2>
 
-          <input
-            type="text"
-            placeholder="Address"
-            className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
-          />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Name"
+                className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none "
+              />
+              <input
+                type="text"
+                placeholder="+1234567890"
+                className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
+              />
+            </div>
 
-          <textarea
-            rows="4"
-            placeholder="Message"
-            className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
-          ></textarea>
-          <div
-            className="mt-4"
-          >
-            <button className="bg-black text-white px-6 py-3 rounded-full font-medium transition cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black ">
-              Submit Quote
-            </button>
+            <input
+              type="email"
+              placeholder="Email"
+              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
+            />
+
+            <input
+              type="text"
+              placeholder="Address"
+              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
+            />
+
+            <textarea
+              rows="4"
+              placeholder="Message"
+              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
+            ></textarea>
+            <div className="mt-4">
+              <button className="bg-black text-white px-6 py-3 rounded-full font-medium transition cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black flex items-center gap-2">
+                Submit Quote
+                <FaPaperPlane className="text-sm" />
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* Right - Image */}
-       
-       
-       
+          {/* Right - Image */}
+        </div>
       </div>
     </div>
-    </div>
-    
   );
 }

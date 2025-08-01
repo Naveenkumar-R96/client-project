@@ -40,25 +40,35 @@ const Footer = () => {
               Services
               <span className="absolute -bottom-1 left-0 w-12 h-1 bg-orange-300 rounded-full animate-pulse" />
             </h2>
-            <ul className="flex items-start  flex-col py-3 gap-y-2 space-x-8 text-gray-700 font-medium">
+            <ul className="flex items-start flex-col py-3 gap-y-2 text-gray-700 font-medium">
               <Link to="/">
-                <li>Home</li>
+                <li className="hover:text-blue-500 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                  Home
+                </li>
               </Link>
 
               <Link to="/about">
-                <li>About Us</li>
+                <li className="hover:text-blue-500 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                  About Us
+                </li>
               </Link>
 
               <Link to="/pricing">
-                <li>Pricing</li>
+                <li className="hover:text-blue-500 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                  Pricing
+                </li>
               </Link>
 
               <HashLink smooth to="/#blog">
-                <li>Blog</li>
+                <li className="hover:text-blue-500 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                  Blog
+                </li>
               </HashLink>
 
               <Link to="/contact">
-                <li>Contact</li>
+                <li className="hover:text-blue-500 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                  Contact
+                </li>
               </Link>
             </ul>
           </div>
