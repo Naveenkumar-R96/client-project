@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCart } from "../Context/ContextApi.jsx";
 import BlogSection from "./BlogSection.jsx";
 import { Link } from "react-router-dom";
@@ -18,15 +18,13 @@ const Home = () => {
       <span className="absolute bottom-10 left-12 w-3 h-3 bg-purple-500 rounded-full"></span>
 
 
-        <div className="text-center max-w-3xl mx-auto z-10 relative">
-          <p className="text-green-500 font-semibold text-sm mb-2">Our Blog</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            Resources for makers &<br />
-            creatives to learn, sell & grow
+        <div className="text-center max-w-7xl  mx-auto z-10 relative">
+          <p className="text-green-500 font-semibold text-sm mb-2">Our Blog</p> 
+          <h1 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            Turning Pixels into Perfection – Your Vision, Retouched.
           </h1>
           <p className="text-gray-600 text-base md:text-lg mb-8">
-            The only corporate card and spend management platform designed to
-            help you spend less.
+            We specialize in high-quality Photoshop services that bring your images to life. Whether it's background removal, photo retouching, color correction, or creative edits — we turn your ideas into visually stunning results. From product images to portraits, we deliver precision and perfection, tailored to your brand's needs.
           </p>
           <div className="flex justify-center gap-4">
             <Link to="contact">

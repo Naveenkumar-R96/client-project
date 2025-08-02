@@ -1,38 +1,15 @@
 import React from "react";
-import Faq from "./Faq.jsx"; // Assuming Faq is a component that you have created
+import Faq from "./Faq.jsx"; 
+import data from "../data/dummy_data"; 
+import ReactCompareImage from 'react-compare-image';
 const Cards = () => {
-  const cards = [
-    {
-      category: "Design",
-      title: "Your company might be in need of a social media audit.",
-      color: "text-green-500",
-    },
-    {
-      category: "Development",
-      title: "How can businesses utilize email marketing to nurture.",
-      color: "text-purple-500",
-    },
-    {
-      category: "Photography",
-      title: "Auto-reply: How to use automated responses.",
-      color: "text-yellow-500",
-    },
-    {
-      category: "Photography",
-      title: "How to set up lighting for product photos.",
-      color: "text-yellow-500",
-    },
-    {
-      category: "Photography",
-      title: "Capture the perfect flat lay with these 5 tips.",
-      color: "text-yellow-500",
-    },
-    {
-      category: "Photography",
-      title: "Using natural light effectively for portraits.",
-      color: "text-yellow-500",
-    },
-  ];
+  const cards = data.flatMap(section =>
+    section.items.map(item => ({
+      ...item,
+      category: section.category,
+      description: section.description,
+    }))
+  );
 
   return (
     <div className="bg-white">
@@ -66,11 +43,71 @@ const Cards = () => {
               <div className="absolute bottom-[-60px] right-0 w-[180px] h-[180px] bg-gray-500 opacity-10 rotate-45 origin-bottom-right z-0" />
 
               {/* Card content */}
-              <img
-                src="https://thumbs.dreamstime.com/b/vector-illustration-avatar-dummy-logo-collection-image-icon-stock-isolated-object-set-symbol-web-137160339.jpg"
-                alt="Card"
-                className="w-full h-48 object-cover z-10 relative"
-              />
+              <div className="bshadow p-4 md:row-span-2">
+                <div style={{ position: 'relative', width: '100%', borderRadius: '16px', overflow: 'hidden' }}>
+                  <ReactCompareImage
+                    leftImage={card.beforeImage}
+                    rightImage={card.afterImage}
+                    leftImageAlt="Before"
+                    rightImageAlt="After"
+                    aspectRatio="taller"
+                    handleSize={40}
+                    sliderLineColor="#FFFFFF"
+                    sliderLineWidth={4}
+                    handleBorderRadius={10}
+                    handleBorderWidth={4}
+                    handleBorderColor="#FFFFFF"
+                    handleBackgroundColor="#FFFFFF"
+                    handleBorderStyle="solid"
+                    leftImageCss={{
+                      objectFit: 'fill',
+                      width: '100%',
+                      height: '100%',
+                      filter: 'brightness(40%)',
+                    }}
+                    rightImageCss={{
+                      objectFit: 'fill',
+                      width: '100%',
+                      height: '100%',
+                      filter: 'brightness(40%)',
+                    }}
+                  />
+
+                  {/* Floating Labels (always visible) */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: '10px',
+                      left: '10px',
+                      backgroundColor: 'rgba(128, 128, 128, 0.7)',
+                      color: '#fff',
+                      padding: '6px 12px',
+                      borderRadius: '8px',
+                      zIndex: 99, // 👈 ensures it's on top of the slider/image layers
+                      pointerEvents: 'none', // 👈 makes it non-interactive (optional)
+                    }}
+                  >
+                    Before
+                  </div>
+
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: '10px',
+                      right: '10px',
+                      backgroundColor: 'rgba(128, 128, 128, 0.7)',
+                      color: '#fff',
+                      padding: '6px 12px',
+                      borderRadius: '8px',
+                      zIndex: 99,
+                      pointerEvents: 'none',
+                    }}
+                  >
+                    After
+                  </div>
+                </div>
+
+              </div>
               <div className="p-4 z-10 relative">
                 <p className={`${card.color} font-semibold text-sm`}>
                   {card.category}
@@ -78,19 +115,14 @@ const Cards = () => {
                 <h2 className="font-bold text-lg text-gray-800 mt-1">
                   {card.title}
                 </h2>
-                <div className="mt-4 group">
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-100 hover:text-blue-700 hover:shadow-md"
+                {/* <div className="mt-4 group">
+                  <Link
+                    to={`/category/${encodeURIComponent(category.category)}`}
+                    className="text-sky-500 font-medium flex items-baseline hover:underline text-sm"
                   >
-                    <span className="relative z-10 group-hover:underline">
-                      More Details
-                    </span>
-                    <span className="transform group-hover:translate-x-1 transition-transform duration-300 text-lg">
-                      →
-                    </span>
-                  </a>
-                </div>
+                    View <FaArrowRight className="ml-2 text-xs" />
+                  </Link>
+                </div> */}
               </div>
             </div>
           ))}

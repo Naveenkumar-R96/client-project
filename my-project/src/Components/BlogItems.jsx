@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
-import data from "../data/dummy_data.json";
+import data from "../data/dummy_data";
 import { useCart } from "../Context/ContextApi";
 
 const CategoryButtons = ({ searchQuery })  => {
@@ -19,9 +19,9 @@ const CategoryButtons = ({ searchQuery })  => {
         Explore Blog Categories
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {/* All Categories Card */}
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 w-full max-w-sm text-left mx-auto">
+        {/* <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 w-full max-w-sm text-left mx-auto">
           <div className="flex items-start">
             <div className="w-1 h-5 bg-orange-400 rounded-sm mr-3 mt-1" />
             <div>
@@ -39,10 +39,10 @@ const CategoryButtons = ({ searchQuery })  => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Individual Category Cards */}
-        {filteredData.map((category, index) => (
+        {data.map((category, index) => (
           <div
             key={index}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 w-full max-w-sm text-left mx-auto"
@@ -61,9 +61,9 @@ const CategoryButtons = ({ searchQuery })  => {
                 )}
                 <Link
                   to={`/category/${encodeURIComponent(category.category)}`}
-                  className="text-sky-500 font-medium flex items-center hover:underline text-sm"
+                  className="text-sky-500 font-medium flex items-baseline hover:underline text-sm"
                 >
-                  More Details <FaArrowRight className="ml-2 text-xs" />
+                  View blogs<FaArrowRight className="ml-2 text-xs" />
                 </Link>
               </div>
             </div>

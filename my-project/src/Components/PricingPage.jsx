@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import data from "../data/dummy_data";
 const Card = ({ title, description, category, price }) => (
   <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 w-full max-w-sm text-left">
     <div className="flex items-start">
@@ -32,41 +32,9 @@ const Card = ({ title, description, category, price }) => (
 );
 
 const PricingPage = () => {
-  const features = [
-    {
-      title: "HDR",
-      description: "Enhancing visual dynamics through HDR.",
-      category: "Technology",
-      price: "$29",
-    },
-    {
-      title: "Day to Dusk",
-      description: "Daylight fades, dusk enchants, transforms.",
-      category: "Nature",
-      price: "$39",
-    },
-    {
-      title: "Virtual Twilight",
-      description: "Transforms day into captivating twilight.",
-      category: "Food",
-      price: "$25",
-    },
-    {
-      title: "Blue Hour",
-      description: "Capture vibrant twilight hues after sunset.",
-      category: "Travel",
-      price: "$35",
-    },
-    {
-      title: "Artistic Edits",
-      description: "Creative transformations and retouching.",
-      category: "Art & Design",
-      price: "$45",
-    },
-  ];
 
   return (
-    <section className="min-h-screen bg-[#f8fcff] flex flex-col py-10 px-4">
+    <section className="bg-[#f8fcff] flex flex-col py-10 px-4">
       {/* Section Heading */}
       <div className="bg-[#f9f9fb] relative text-center overflow-hidden mb-10">
         <h2 className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic text-center">
@@ -83,13 +51,12 @@ const PricingPage = () => {
       
       {/* Card Grid */}
       <div className="flex flex-wrap justify-center gap-6">
-        {features.map((item, index) => (
+        {data.map((item, index) => (
           <Card
             key={index}
-            title={item.title}
+            title={item.category}
             description={item.description}
-            category={item.category}
-            price={item.price}
+            price={item.pricing}
           />
         ))}
       </div>
