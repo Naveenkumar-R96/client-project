@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
@@ -15,40 +16,52 @@ const AboutUs = () => {
         <div className="absolute bottom-6 left-4 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[18px] border-transparent border-t-blue-400 opacity-30" />
         <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-no-repeat bg-center opacity-10 pointer-events-none" />
 
-        <h1 className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic">
+        <motion.h1
+          initial={{ y: -40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic"
+        >
           About Us
-        </h1>
+        </motion.h1>
 
-        {/* Breadcrumb */}
-        {/* <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          className="text-sm text-gray-500 mt-3 z-10 relative font-semibold"
+        >
           <Link to="/" className="text-black hover:underline">
             Home
           </Link>
           <span className="mx-1">›</span>
           <span className="text-blue-500">About Us</span>
-        </p> */}
-        <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold">
-          <Link to="/" className="text-black hover:underline">
-            Home
-          </Link>
-          <span className="mx-1">›</span>
-          <span className="text-blue-500">About Us</span>
-        </p>
+        </motion.p>
       </div>
 
       {/* Content Section */}
       <div className="mt-10 grid grid-cols-1 mb-10 md:grid-cols-2 gap-10 px-6 md:px-16 max-w-7xl mx-auto items-center">
         {/* Image */}
-        <div>
+        <motion.div
+          initial={{ x: -60, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <img
             src="https://images.unsplash.com/photo-1481214110143-ed630356e1bb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="About"
             className="rounded-3xl shadow-lg object-cover w-full max-h-[420px]"
           />
-        </div>
+        </motion.div>
 
         {/* Text */}
-        <div>
+        <motion.div
+          initial={{ x: 60, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-3xl font-bold text-blue-500 italic mb-3">
             Who We Are
           </h2>
@@ -68,7 +81,7 @@ const AboutUs = () => {
               Contact Us
             </button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import before from "../assets/before.jpg";
 import after from "../assets/after.jpg";
 import ReactCompareImage from "react-compare-image";
+import { motion } from "framer-motion";
 const CategoryPage = () => {
   const { name } = useParams();
   const decodedName = decodeURIComponent(name);
@@ -64,25 +65,41 @@ const CategoryPage = () => {
         </p>
       </div>
 
-      <section className="bg-white py-16 px-8 md:px-20 text-center max-w-[900px] mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-gray-800">
+      <motion.section
+        className="bg-white py-16 px-8 md:px-20 text-center max-w-[900px] mx-auto"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.h2
+          className="text-4xl font-bold mb-12 text-gray-800"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           Our{" "}
           <span className="text-gray-900">
             {categoryData.process.length}-step {categoryData.category} process
           </span>
-        </h2>
+        </motion.h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
           {categoryData.process.map((step, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex items-start gap-4 text-lg text-gray-800"
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true }}
             >
               <FaArrowCircleRight className="text-blue-500 mt-1" size={24} />
               <span>{step}</span>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* 🔵 Hero Description */}
       {/* <div className="bg-blue-200/25 py-16 text-center px-4">
@@ -109,11 +126,14 @@ const CategoryPage = () => {
             const isEven = index % 2 === 0;
 
             return (
-              <div
+              <motion.div
                 key={index}
                 className={`flex flex-col lg:flex-row items-center gap-8 mb-12 ${
                   isEven ? "" : "lg:flex-row-reverse"
                 }`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 {/* Image Compare Block */}
                 <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-md">
@@ -202,7 +222,7 @@ const CategoryPage = () => {
                     By {item.author} on {item.date}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

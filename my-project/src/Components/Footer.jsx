@@ -6,15 +6,24 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { motion, useInView } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <footer className="bg-white text-gray-700 pt-10 pb-6 px-6 md:px-20">
+    <motion.footer
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="bg-white text-gray-700 pt-10 pb-6 px-6 md:px-20"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left: Logo, Description, Email */}
         <div>
@@ -116,7 +125,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
