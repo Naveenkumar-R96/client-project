@@ -20,6 +20,13 @@ const AboutUs = () => {
         </h1>
 
         {/* Breadcrumb */}
+        {/* <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold">
+          <Link to="/" className="text-black hover:underline">
+            Home
+          </Link>
+          <span className="mx-1">›</span>
+          <span className="text-blue-500">About Us</span>
+        </p> */}
         <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold">
           <Link to="/" className="text-black hover:underline">
             Home
@@ -57,7 +64,7 @@ const AboutUs = () => {
             praesentium consequuntur?
           </p>
           <Link to="/contact">
-            <button className="border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition duration-300">
+            <button className="border border-black text-black px-6 py-3 rounded-full font-medium hover:bg-black hover:text-white transition cursor-pointer flex items-center gap-2">
               Contact Us
             </button>
           </Link>

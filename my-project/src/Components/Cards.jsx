@@ -43,7 +43,7 @@ const Cards = () => {
               <div className="absolute bottom-[-60px] right-0 w-[180px] h-[180px] bg-gray-500 opacity-10 rotate-45 origin-bottom-right z-0" />
 
               {/* Card content */}
-              <div className="bshadow p-4 md:row-span-2">
+              <div className="bshadow px-4 py-2md:row-span-2">
                 <div style={{ position: 'relative', width: '100%', borderRadius: '16px', overflow: 'hidden' }}>
                   <ReactCompareImage
                     leftImage={card.beforeImage}
@@ -108,13 +108,14 @@ const Cards = () => {
                 </div>
 
               </div>
-              <div className="p-4 z-10 relative">
-                <p className={`${card.color} font-semibold text-sm`}>
-                  {card.category}
-                </p>
+              <div className="px-4 py-2 z-10 relative">
                 <h2 className="font-bold text-lg text-gray-800 mt-1">
-                  {card.title}
+                  {card.category}
                 </h2>
+                <p className={`${card.color} font-semibold text-sm`}>
+                  {card.title}
+                </p>
+                
                 {/* <div className="mt-4 group">
                   <Link
                     to={`/category/${encodeURIComponent(category.category)}`}

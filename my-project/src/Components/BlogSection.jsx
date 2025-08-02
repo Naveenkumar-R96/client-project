@@ -21,7 +21,10 @@ const BlogSection = () => {
   );
   return (
     <div>
-      <section className="px-4 md:px-16 mt-3 md:mt-5">
+      <section className="px-4 md:px-16 mt-5 md:mt-5">
+        <h1 className="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          Our Popular service
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[auto] bg-white rounded-2xl shadow-lg p-2">
           {/* Big card */}
           <div className="bshadow p-4 md:row-span-2">

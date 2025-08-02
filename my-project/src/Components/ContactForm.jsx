@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPaperPlane } from "react-icons/fa";
 
@@ -75,8 +75,10 @@ export default function ContactForm() {
         <h1 className="text-5xl font-extrabold text-gray-700 tracking-wide z-10 relative italic">
           Contact
         </h1>
-        <p className="text-sm text-gray-500 mt-2 z-10 relative font-bold hover:text-black">
-          <Link to="/">Home</Link>
+        <p className="text-sm text-gray-500 mt-3 z-10 relative font-semibold">
+          <Link to="/" className="text-black hover:underline">
+            Home
+          </Link>
           <span className="mx-1">›</span>
           <span className="text-blue-500">Contact</span>
         </p>

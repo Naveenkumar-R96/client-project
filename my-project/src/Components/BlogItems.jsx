@@ -50,7 +50,7 @@ const CategoryButtons = ({ searchQuery })  => {
             <div className="flex items-start">
               <div className="w-1 h-5 bg-orange-400 rounded-sm mr-3 mt-1" />
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {category.category}
                 </h3>
                 <p className="text-gray-600 mb-2">{category.description}</p>
