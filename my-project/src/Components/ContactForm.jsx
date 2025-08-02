@@ -12,7 +12,6 @@ export default function ContactForm() {
     message: "",
   });
 
-
   const [submittedData, setSubmittedData] = useState([]);
   const [errors, setErrors] = useState({});
 
@@ -47,7 +46,7 @@ export default function ContactForm() {
       };
       setSubmittedData((prev) => [...prev, newEntry]);
       console.log("Submitted Data:", [...submittedData, newEntry]);
-      // Optional: Clear form
+
       setFormData({
         name: "",
         countryCode: "+91",
@@ -105,15 +104,20 @@ export default function ContactForm() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Name"
-                className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
-                required
-              />
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Name"
+                  className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1 ml-3 font-bold">{errors.name}</p>
+                )}
+              </div>
+
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -122,55 +126,66 @@ export default function ContactForm() {
                   onChange={handleChange}
                   className="w-1/3 border-3 border-gray-100 rounded-md px-3 py-3 focus:outline-none"
                   placeholder="+91"
-                  required
                 />
-                <input
-                  type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Phone Number"
-                  className="w-2/3 border-3 border-gray-100 rounded-md px-4 py-3 focus:outline-none"
-                  required
-                />
+                <div className="w-2/3">
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Phone Number"
+                    className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
+                  />
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm mt-1 ml-3 font-bold">
+                      {errors.phone}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-            {errors.phone && (
-              <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
-            )}
 
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email"
-              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
-              required
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-            )}
+            <div className="mt-4">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1 ml-3 font-bold">{errors.email}</p>
+              )}
+            </div>
 
-            <input
-              type="text"
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-              placeholder="Address"
-              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
-              required
-            />
+            <div className="mt-4">
+              <input
+                type="text"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                placeholder="Address"
+                className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
+              />
+              {errors.address && (
+                <p className="text-red-500 text-sm mt-1 ml-3 font-bold">{errors.address}</p>
+              )}
+            </div>
 
-            <textarea
-              name="message"
-              rows="4"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Message"
-              className="border-3 border-gray-100 rounded-md px-4 py-3 w-full mt-4 focus:outline-none"
-              required
-            ></textarea>
+            <div className="mt-4">
+              <textarea
+                name="message"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Message"
+                className="border-3 border-gray-100 rounded-md px-4 py-3 w-full focus:outline-none"
+              ></textarea>
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1 ml-3 font-bold">{errors.message}</p>
+              )}
+            </div>
 
             <div className="mt-4">
               <button
