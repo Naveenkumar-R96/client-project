@@ -30,7 +30,7 @@ const NavBar = () => {
     }`;
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-16 py-4 bg-white shadow-sm">
+    <nav className="sticky top-0 z-500 flex items-center justify-between px-6 md:px-16 py-4 bg-white shadow-sm">
       {/* Logo */}
       <div className="text-2xl font-bold">
         Short.<span className="text-red-500">ExpoImages</span>

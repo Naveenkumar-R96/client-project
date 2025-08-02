@@ -1,6 +1,20 @@
+/* Import Poppins font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Tailwind & FontAwesome */
 @import "tailwindcss";
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+@import "@fontsource/poppins"; /* Default weight */
+@import "@fontsource/poppins/400.css"; /* Optional: Regular */
+@import "@fontsource/poppins/700.css"; /* Optional: Bold */
+
+
+/* Apply Poppins globally */
+
+
 html {
-    scroll-behavior: smooth;
-  }
-  
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
